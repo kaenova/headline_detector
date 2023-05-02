@@ -2,10 +2,10 @@ import setuptools
 
 setuptools.setup(
     name = "headline_detector",
-    version = "0.0.1",
+    version = "1.0.0",
     author = "Kaenova Mahendra Auditama",
     author_email = "kaenova@gmail.com",
-    description = "Indonesian Headline Detection using Fasttext, CNN, or IndoBERTweet models.",
+    description = "An Indonesian Headline Detection Python API.",
     classifiers = [
         "Programming Language :: Python :: 3",
     ],
