@@ -18,7 +18,7 @@ $ pip install headline-detector
 
 All meassured in accuracy
 
-### Model Throughput
+## Model Throughput
 
 | Model        | Throughput (± Text/seconds) |
 | ------------ | --------------------------- |
