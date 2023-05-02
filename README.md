@@ -1,4 +1,4 @@
-# headline_detector
+# [headline_detector](https://github.com/kaenova/headline_detector)
 
 _Indonesian Headline Detection Python API_
 

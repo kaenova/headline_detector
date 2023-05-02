@@ -1,8 +1,14 @@
 import setuptools
 
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
 setuptools.setup(
     name = "headline_detector",
-    version = "1.0.0",
+    version = "1.0.1",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author = "Kaenova Mahendra Auditama",
     author_email = "kaenova@gmail.com",
     description = "An Indonesian Headline Detection Python API.",
