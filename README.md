@@ -1,6 +1,6 @@
 # headline_detector
 
-_An Indonesian Headline Detection Python API._
+_Indonesian Headline Detection Python API_
 
 This is a Python library that provides APIs for detecting headlines in textual data, especially on social media platforms such as Twitter. The library utilizes a model that has been developed and trained on a dataset of Twitter posts containing both headline and non-headline texts, with the assistance of journalism professionals to ensure the data quality.
 
@@ -16,7 +16,7 @@ $ pip install headline-detector
 | CNN          | 0.9081     | 0.9081     | 0.8950     | 0.8898     | 0.8950     | 0.8898     |
 | IndoBERTweet | 0.9895     | 0.9921     | 0.9738     | 0.9580     | 0.9843     | 0.9685     |
 
-_All meassured in accuracy_
+All meassured in accuracy
 
 ### Model Throughput
 
@@ -30,7 +30,7 @@ Tested on Intel i7-6700k and 32GB of RAM.
 
 ## Usage
 
-Output either is 0 (non-headline) and 1 (headline)
+Output either 0 (non-headline) and 1 (headline)
 
 ```python
 from headline_detector import FasttextDetector, IndoBERTweetDetector, CNNDetector
