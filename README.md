@@ -4,6 +4,10 @@ _An Indonesian Headline Detection Python API._
 
 This is a Python library that provides APIs for detecting headlines in textual data, especially on social media platforms such as Twitter. The library utilizes a model that has been developed and trained on a dataset of Twitter posts containing both headline and non-headline texts, with the assistance of journalism professionals to ensure the data quality.
 
+```sh
+$ pip install headline-detector
+```
+
 ## Available scenario and the performance
 
 | Model        | Scenario 1 | Scenario 2 | Scenario 3 | Scenario 4 | Scenario 5 | Scenario 6 |
