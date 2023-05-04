@@ -1,14 +1,9 @@
 from .processing_pipeline import TextProcessingPipeline, NDETCStemmerWraper
 from .processing_pipeline import processing_func as pf
 
-from NDETCStemmer import NDETCStemmer, CustomModelDownloader
+from NDETCStemmer import NDETCStemmer
 
-downloader = CustomModelDownloader(
-    model_1="https://is3.cloudhost.id/s3.kaenova.my.id/NDETCStemmer/Model/w2vec_wiki_id_case",
-    model_2="https://is3.cloudhost.id/s3.kaenova.my.id/NDETCStemmer/Model/w2vec_wiki_id_case.trainables.syn1neg.npy",
-    model_3="https://is3.cloudhost.id/s3.kaenova.my.id/NDETCStemmer/Model/w2vec_wiki_id_case.wv.vectors.npy",
-)
-original_stemmer = NDETCStemmer(custom_downloader=downloader)
+original_stemmer = NDETCStemmer()
 stemmer = NDETCStemmerWraper(original_stemmer)
 
 scenario_processor = {
