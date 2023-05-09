@@ -1,5 +1,7 @@
 # [headline_detector](https://github.com/kaenova/headline_detector)
 
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/kaenova/headline_detector_space)
+
 _Indonesian Headline Detection Python API_
 
 This is a Python library that provides APIs for detecting headlines in textual data, especially on social media platforms such as Twitter. The library utilizes a model that has been developed and trained on a dataset of Twitter posts containing both headline and non-headline texts, with the assistance of journalism professionals to ensure the data quality.
