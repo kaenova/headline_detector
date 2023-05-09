@@ -36,14 +36,14 @@ class FasttextDetector:
                 logits = self.active_model.forward([text])
                 prediction.append(logits)
         prediction = torch.cat(prediction, 0)
-        prediction = F.softmax(prediction, dim=0)
+        prediction = F.softmax(prediction, dim=1)
         prediction = torch.argmax(prediction, 1)
         prediction = prediction.cpu().numpy()
         prediction = prediction.tolist()
         return prediction
 
     @staticmethod
-    def load_from_scenario(scenario_num: "int") -> "model.FastTextClassifier":
+    def load_from_scenario(scenario_num: "int") -> "FasttextDetector":
         # Load model
         scenario_num = int(scenario_num)
         if scenario_num not in m_checkpoint.fasttext_checkpoints.keys():
@@ -96,14 +96,14 @@ class CNNDetector:
                 logits = self.active_model.forward([text])
                 prediction.append(logits)
         prediction = torch.cat(prediction, 0)
-        prediction = F.softmax(prediction, dim=0)
+        prediction = F.softmax(prediction, dim=1)
         prediction = torch.argmax(prediction, 1)
         prediction = prediction.cpu().numpy()
         prediction = prediction.tolist()
         return prediction
 
     @staticmethod
-    def load_from_scenario(scenario_num: "int") -> "model.CNNClassifier":
+    def load_from_scenario(scenario_num: "int") -> "CNNDetector":
         scenario_num = int(scenario_num)
         if scenario_num not in m_checkpoint.cnn_checkpoints.keys():
             raise ValueError("Not a valid scenario number")
@@ -157,14 +157,14 @@ class IndoBERTweetDetector:
                 logits = self.active_model.forward([text])
                 prediction.append(logits)
         prediction = torch.cat(prediction, 0)
-        prediction = F.softmax(prediction, dim=0)
+        prediction = F.softmax(prediction, dim=1)
         prediction = torch.argmax(prediction, 1)
         prediction = prediction.cpu().numpy()
         prediction = prediction.tolist()
         return prediction
 
     @staticmethod
-    def load_from_scenario(scenario_num: "int") -> "model.BERTClassifier":
+    def load_from_scenario(scenario_num: "int") -> "IndoBERTweetDetector":
         scenario_num = int(scenario_num)
         if scenario_num not in m_checkpoint.indobertweet_checkpoints.keys():
             raise ValueError("Not a valid scenario number")

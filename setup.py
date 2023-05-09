@@ -7,7 +7,7 @@ requirements = (this_directory / "requirements.txt").read_text().split("\n")
 
 setuptools.setup(
     name = "headline_detector",
-    version = "1.0.2",
+    version = "1.0.3",
     long_description=long_description,
     long_description_content_type='text/markdown',
     author = "Kaenova Mahendra Auditama",
